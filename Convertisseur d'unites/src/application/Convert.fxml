@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConvertController">
+   <children>
+      <TabPane layoutX="87.0" layoutY="25.0" prefHeight="450.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Aceuile">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#bc0f0f" layoutX="71.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à la Convertisseur d'unites">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="379.0" layoutY="359.0" mnemonicParsing="false" onAction="#fermer" prefHeight="13.0" prefWidth="117.0" text="Ferme" />
+                        <Text layoutX="21.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onglet 1: Litre, Tasse, Gallon- convertisseur  d'unité de volume" wrappingWidth="388.22900390625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="20.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onglet 2: Grammes en Onces - convertisseur d'unité de poids" wrappingWidth="390.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="21.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onglet 3: Mètre en Pied - convertisseur d'unité de distance" wrappingWidth="395.22900390625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Onglet 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#1f5ed3" layoutX="136.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volume: Litre, Tasse, Gallon" wrappingWidth="340.22900390625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtvol1" layoutX="48.0" layoutY="117.0" onKeyReleased="#calculer1" text="1" />
+                        <TextField fx:id="txtvol2" layoutX="306.0" layoutY="117.0" onKeyReleased="#calculerV1" text="1" />
+                        <ComboBox fx:id="cbovol1" layoutX="53.0" layoutY="78.0" onKeyReleased="#calculer1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbovol2" layoutX="306.0" layoutY="78.0" onKeyReleased="#calculerV1" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Onglet 2">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtpoid1" layoutX="62.0" layoutY="114.0" onKeyReleased="#calculer2" text="1" />
+                        <TextField fx:id="txtpoid2" layoutX="312.0" layoutY="114.0" onKeyReleased="#calculerP2" text="1" />
+                        <Text fill="#5ce41e" layoutX="154.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poids: Grammes et Onces">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbopoid1" layoutX="76.0" layoutY="72.0" onKeyReleased="#calculer2" prefWidth="150.0" />
+                        <ComboBox fx:id="cbopoid2" layoutX="312.0" layoutY="72.0" onKeyReleased="#calculerP2" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#calculerD3" text="Onglet 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtdis1" layoutX="61.0" layoutY="117.0" onKeyReleased="#calculer3" text="1" />
+                        <TextField fx:id="txtdis2" layoutX="320.0" layoutY="117.0" onKeyReleased="#calculerD3" text="1" />
+                        <Text fill="#e47505" layoutX="179.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance: Mètre et Pied" wrappingWidth="191.50392150878906">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbodis1" layoutX="67.0" layoutY="75.0" onKeyReleased="#calculer3" prefWidth="150.0" />
+                        <ComboBox fx:id="cbodis2" layoutX="326.0" layoutY="75.0" onKeyReleased="#calculerD3" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
